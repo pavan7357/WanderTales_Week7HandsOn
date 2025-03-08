@@ -1,0 +1,13 @@
+streamlit
+openai
+requests
+gtts
+moviepy
+wikipedia-api
+faiss-cpu
+langchain
+langchain-openai
+pydantic
+python-dotenv
+pillow
+numpy

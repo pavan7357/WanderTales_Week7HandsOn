@@ -1,5 +1,7 @@
-import os
 import streamlit as st
+import os
+from amadeus import Client
+from langchain_openai.chat_models import ChatOpenAI
 
 # ✅ Load API keys from Streamlit secrets
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]

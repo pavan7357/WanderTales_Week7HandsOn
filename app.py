@@ -4,7 +4,7 @@ from utils import fetch_weather, fetch_tourist_attractions, fetch_flight_details
 import requests
 from PIL import Image
 from io import BytesIO
-from moviepy.editor import AudioFileClip
+from moviepy.editor import *
 
 st.set_page_config(page_title="✈️ AI Travel Planner", layout="wide")
 

@@ -3,7 +3,7 @@ openai
 requests
 wikipedia-api
 gtts
-moviepy
+
 onnx
 onnxruntime
 numpy

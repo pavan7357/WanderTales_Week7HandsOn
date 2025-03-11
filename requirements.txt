@@ -9,5 +9,6 @@ onnxruntime
 numpy
 pillow
 langchain
+langchain-openai
 transformers
 amadeus

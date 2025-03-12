@@ -6,8 +6,8 @@ WanderTales AI creates **personalized travel plans** with **immersive AI-generat
 ---
 
 ## 📌 **Key Features**
-**Smart Itinerary** – Personalized accommodations, attractions & dining recommendations  
-**AI Travel Story** – Engaging, narrated travel experiences  
+**📑 Smart Itinerary** – Personalized accommodations, attractions & dining recommendations  
+**🛴 AI Travel Story** – Engaging, narrated travel experiences  
 **🎤 AI Voiceover** – Listen to your travel story  
 **🖼️ AI-Generated Images** – Unique visuals for your journey  
 **🎥 AI-Powered Travel Video** – Cinematic trip montages  
@@ -93,4 +93,4 @@ Alternatively, you can store them in **secrets.toml** for Streamlit deployment.
 
 ---
 
-📌 **Developed by:** **[The WanderCoders Team]** 🚀🎉  
+📌 **Developed by:** [The WanderCoders Team] 🚀🎉  

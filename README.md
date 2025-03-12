@@ -1,46 +1,44 @@
-# **🌍✈️ WanderTales AI Travel Planner**
-🚀 **Your AI-powered assistant for seamless travel planning!**  
+🌍✈️ WanderTales AI Travel Planner
+🚀 Your AI-powered assistant for effortless travel planning!
 
-WanderTales AI helps travelers generate personalized travel plans, immersive AI-generated stories, real-time flight and hotel details, weather forecasts, and even **stunning images & videos** for their trips!  
+WanderTales AI creates personalized travel plans with immersive AI-generated stories, real-time flight and hotel details, weather forecasts, and stunning AI-generated images & videos.
 
----
+📌 Key Features
+✔️ Smart Itinerary – Personalized accommodations, attractions & dining recommendations
+✔️ AI Travel Story – Engaging, narrated travel experiences
+✔️ 🎤 AI Voiceover – Listen to your travel story
+✔️ 🖼️ AI-Generated Images – Unique visuals for your journey
+✔️ 🎥 AI-Powered Travel Video – Cinematic trip montages
+✔️ 🌦 Live Weather Updates – Stay prepared
+✔️ 🏨 Hotel & 🍽️ Restaurant Suggestions – Top-rated places to stay & dine
+✔️ ✈️ Real-Time Flights – Up-to-date flight details
 
-## **📌 Features**
-✅ **AI-Generated Travel Plan** – Get a full itinerary with accommodations, attractions, and food recommendations.  
-✅ **Immersive AI Travel Story** – Read a beautifully narrated AI-generated story for your journey.  
-✅ **🎤 AI Voiceover** – Listen to a voiceover of your travel story, making it more engaging.  
-✅ **🖼️ Image Generation** – Get 5 AI-generated images tailored to your trip.  
-✅ **🎥 Travel Video** – A cinematic AI-created travel montage using generated images & voiceovers.  
-✅ **🌦 Weather Forecast** – Stay prepared with real-time weather updates.  
-✅ **🏨 Hotel Recommendations** – Find the best places to stay in your destination.  
-✅ **🍽️ Top Restaurants** – Explore the best food spots recommended for your travel purpose.  
-✅ **✈️ Flight Details** – Get real-time flight availability from your origin to your destination.  
 
----
+👥 Team Name: The WanderCoders
+🚀 Dharani Thakkallapally (AI & NLP Engineer)
+Develop AI-based dynamic storytelling using NLP models (Hugging Face, GPT-based models).
+Fine-tune pre-trained NLP models for travel-specific content generation.
+Implement algorithms for personalized travel recommendations.
+Ensure seamless integration between AI-generated narratives and travel plans.
+Skillset: Data Science, Machine Learning, Deep Learning, Python & Libraries, Cloud Platforms
 
-**📌 Usage Guide**
-🗺️ Plan Your Trip
-1️⃣ Enter your Origin City
-2️⃣ Enter your Destination
-3️⃣ Select Start & End Dates
-4️⃣ Choose your Purpose of Visit
-🔄 Generate Travel Information
-✨ Click "Generate Travel Plan & Details" to fetch:
----
+🎯 Banu Teja Jampani (AI-Powered Recommendation Engineer)
+Design and implement a personalized recommendation engine based on user preferences and reviews.
+Utilize machine learning models and rule-based filtering for tailored travel plans.
+Adapt recommendations dynamically based on real-time factors (weather, delays).
+Document project workflow, methodologies, and results.
+Skillset: Data Science, Machine Learning, Deep Learning, Python & Libraries, Blockchain Technologies
 
-**AI-generated travel itinerary 📅**
-Weather Forecast 🌦
-Tourist Attractions 🏛
-Recommended Restaurants 🍽️
-Best Hotels 🏨
-Available Flights ✈️
-📖 AI Travel Story
-✨ Click "Generate Story & Voiceover" to:
----
+🔗 Pavan Sundar Reddy Guthikonda (Backend & API Integration Developer)
+Develop and manage backend architecture using Flask/FastAPI.
+Integrate APIs (Google Places, OpenWeatherMap, Amadeus API, SerpAPI) for real-time data.
+Build RESTful APIs for frontend-backend communication.
+Manage local storage for user data and preferences.
+Skillset: Data Science, Machine Learning, Deep Learning, Python & Libraries, Node.js, SQL Databases
 
-**Read an AI-generated travel story ✍️**
-Listen to an AI-narrated version 🎤
-🖼️ AI-Generated Images & Video
-✨ Click "Generate Images & Video" to:
-View 5 AI-generated travel images 🖼️
-Watch an AI-created travel video 🎥
+🎨 Viswanth Tammana (Frontend Developer | Team Lead)
+Build an interactive user interface using Streamlit.
+Ensure smooth real-time updates from backend to frontend.
+Implement UI components for travel recommendations and dynamic storytelling.
+Collaborate with Banu to display personalized recommendations in the UI effectively.
+Skillset: Data Science, Machine Learning, Deep Learning, Python & Libraries, React.js, REST API

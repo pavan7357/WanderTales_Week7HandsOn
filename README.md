@@ -18,3 +18,29 @@ WanderTales AI helps travelers generate personalized travel plans, immersive AI-
 
 ---
 
+**📌 Usage Guide**
+🗺️ Plan Your Trip
+1️⃣ Enter your Origin City
+2️⃣ Enter your Destination
+3️⃣ Select Start & End Dates
+4️⃣ Choose your Purpose of Visit
+🔄 Generate Travel Information
+✨ Click "Generate Travel Plan & Details" to fetch:
+---
+
+**AI-generated travel itinerary 📅**
+Weather Forecast 🌦
+Tourist Attractions 🏛
+Recommended Restaurants 🍽️
+Best Hotels 🏨
+Available Flights ✈️
+📖 AI Travel Story
+✨ Click "Generate Story & Voiceover" to:
+---
+
+**Read an AI-generated travel story ✍️**
+Listen to an AI-narrated version 🎤
+🖼️ AI-Generated Images & Video
+✨ Click "Generate Images & Video" to:
+View 5 AI-generated travel images 🖼️
+Watch an AI-created travel video 🎥

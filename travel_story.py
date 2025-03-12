@@ -1,3 +1,4 @@
+
 import openai
 import requests
 import wikipediaapi
@@ -6,11 +7,12 @@ import time
 import onnx
 import numpy as np
 from PIL import Image
-from moviepy import *  # For video editing
+from moviepy.editor import *  # For video editing
 from gtts import gTTS  # For text-to-speech
 from onnxruntime import InferenceSession
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from config import llm, OPENAI_API_KEY # Import the latest API key from config.py
+from config import OPENAI_API_KEY # Import the latest API key from config.py
+from config import llm, amadeus
 import openai
 
 # ✅ Ensure OpenAI API is using the latest key
@@ -27,18 +29,25 @@ def get_wikipedia_summary(place):
     page = wiki.page(place)
     return page.summary[:500] if page.exists() else "No Wikipedia summary found."
 
-def generate_travel_story(destination, purpose, start_date, end_date):
+def generate_travel_story(origin, destination, purpose, start_date, end_date):
     wikipedia_info = get_wikipedia_summary(destination)
 
     purpose_templates = {
-        "leisure": f"You are about to explore {destination} on a relaxing leisure trip from {start_date} to {end_date}. Describe your experiences as you visit famous landmarks, stroll through parks, and enjoy the peaceful atmosphere.",
-        "food": f"As a food lover, you're in {destination} from {start_date} to {end_date} to explore its delicious street food, high-end restaurants, and unique local flavors. Describe the dishes you'll taste, the bustling food markets, and the famous cafés you’ll visit.",
-        "adventure": f"You're visiting {destination} for an adrenaline-filled adventure from {start_date} to {end_date}. Describe thrilling activities such as hiking, surfing, skydiving, and other outdoor experiences in the area.",
-        "business": f"You're traveling to {destination} for a business trip from {start_date} to {end_date}. Describe your meetings, networking events, and the city's corporate atmosphere. Also, mention any work-life balance experiences, like after-hours dining or sightseeing.",
-        "romantic": f"You're in {destination} for a romantic getaway from {start_date} to {end_date}. Describe the intimate dinners, scenic walks, and breathtaking sunset views you'll experience with your partner.",
-        "spiritual": f"You're visiting {destination} for a spiritual retreat from {start_date} to {end_date}. Describe the meditation spots, temples, churches, and peaceful landscapes where you'll find tranquility and reflection.",
-        "family": f"You're on a family trip to {destination} from {start_date} to {end_date}, filled with fun and bonding moments. Describe the amusement parks, kid-friendly attractions, and the joy of exploring new places together."
+      "leisure": f"You are about to embark on a relaxing leisure trip starting from {origin} to {destination} from {start_date} to {end_date}. Describe your journey, including your departure experience, flight details, and how you arrive at {destination}. Highlight the famous landmarks, scenic parks, and peaceful experiences during your visit.",
+    
+      "food": f"As a food lover, you're traveling from {origin} to {destination} from {start_date} to {end_date} to explore its vibrant culinary scene. Describe the unique food experiences from the departure airport to your destination, including delicious street food, high-end restaurants, and bustling food markets in {destination}. Mention iconic cafés and dishes travelers should not miss.",
+    
+      "adventure": f"You're departing from {origin} to {destination} for an adrenaline-filled adventure from {start_date} to {end_date}. Describe your travel experience, flight, and arrival at {destination}. Highlight the thrilling activities such as hiking, surfing, skydiving, and other outdoor experiences that make this trip exhilarating.",
+    
+      "business": f"You're traveling from {origin} to {destination} for a business trip from {start_date} to {end_date}. Describe your departure from {origin}, your flight experience, and how you arrive at {destination}. Detail your meetings, networking events, and the city's corporate atmosphere. Also, mention after-hours dining or sightseeing to balance work and leisure.",
+    
+      "romantic": f"You're setting off from {origin} to {destination} for a romantic getaway from {start_date} to {end_date}. Describe the journey from {origin}, including your travel experience and how you and your partner arrive at {destination}. Highlight intimate dinners, scenic walks, breathtaking sunset views, and special moments shared during this trip.",
+    
+      "spiritual": f"You're traveling from {origin} to {destination} for a spiritual retreat from {start_date} to {end_date}. Describe your departure experience from {origin}, flight details, and arrival at {destination}. Mention meditation spots, temples, churches, and peaceful landscapes that provide a sense of tranquility and reflection.",
+    
+      "family": f"You're taking a family trip from {origin} to {destination} from {start_date} to {end_date}, creating memorable bonding moments. Describe your journey, including how you and your family prepare for the trip, your flight experience, and your arrival at {destination}. Highlight amusement parks, kid-friendly attractions, and activities that make this a joyful and unforgettable experience for everyone."
     }
+
 
     purpose_prompt = purpose_templates.get(purpose, purpose_templates["leisure"])
 
@@ -54,14 +63,26 @@ def generate_travel_story(destination, purpose, start_date, end_date):
 
     response = llm.invoke(full_prompt)
     return response.content if hasattr(response, 'content') else str(response)
+
 # ✅ Function to generate a travel plan
-def generate_travel_plan(destination, start_date, end_date, purpose):
+def generate_travel_plan(origin, destination, start_date, end_date, purpose):
     prompt = f"""
-    Generate a detailed travel itinerary for a trip to {destination} from {start_date} to {end_date} for {purpose}.
-    Include accommodations, food recommendations, attractions, and transportation details.
+    Generate a detailed travel itinerary for a trip starting from {origin} to {destination} from {start_date} to {end_date} for {purpose}.
+    
+    Include the following details:
+    - **Departure details** from {origin}, including flight or transportation options.
+    - **Arrival experience** in {destination} and first impressions.
+    - **Accommodation recommendations** suitable for {purpose}.
+    - **Top attractions** in {destination} that match {purpose}.
+    - **Food and dining recommendations**, including famous restaurants.
+    - **Local transportation options** to navigate within {destination}.
+    - **Return trip details** from {destination} back to {origin} (if applicable).
+    
+    Ensure the itinerary is engaging and structured as a day-by-day plan.
     """
     response = llm.invoke(prompt)
     return response.content if hasattr(response, 'content') else str(response)
+
 
 # ✅ Function to generate exactly 5 travel images based on purpose with timeout & retry
 def generate_travel_images(destination, purpose):
@@ -164,17 +185,18 @@ def create_travel_video(image_urls, narration_audio, output_video="travel_story.
 
 # ✅ Execution for Testing
 if __name__ == "__main__":
-    destination = "Paris"
-    purpose = "Leisure"
-    start_date = "2025-04-10"
+    origin = "New York"
+    destination = "Hyderabad"
+    purpose = "Family"
+    start_date = "2025-04-15"
     end_date = "2025-04-20"
 
     print("📅 Generating Travel Plan...")
-    travel_plan = generate_travel_plan(destination, start_date, end_date, purpose)
+    travel_plan = generate_travel_plan(origin, destination, start_date, end_date, purpose)
     print(f"📝 Travel Plan:\n{travel_plan}")
 
     print("🔄 Fetching data and generating travel story...")
-    travel_story_text = generate_travel_story(destination, purpose, start_date, end_date)
+    travel_story_text = generate_travel_story(origin, destination, purpose, start_date, end_date)
     print(f"📖 Travel Story:\n{travel_story_text}")
 
     print("🖼 Generating Travel Images...")

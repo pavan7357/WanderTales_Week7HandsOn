@@ -44,41 +44,53 @@ export AMADEUS_API_KEY="your-amadeus-api-key"
 export AMADEUS_API_SECRET="your-amadeus-api-secret"
 ```
 Alternatively, you can store them in **secrets.toml** for Streamlit deployment.
+
 ---
 
-**👥 Team Name: The WanderCoders**
-## 🚀 Dharani Thakkallapally (AI & NLP Engineer)
+## 👥 **Team Name: The WanderCoders**
 
-Develop AI-based dynamic storytelling using NLP models (Hugging Face, GPT-based models).
-Fine-tune pre-trained NLP models for travel-specific content generation.
-Implement algorithms for personalized travel recommendations.
-Ensure seamless integration between AI-generated narratives and travel plans.
-Skillset: Data Science, Machine Learning, Deep Learning, Python, Cloud Platforms
-🎯 Banu Teja Jampani (AI-Powered Recommendation Engineer)
+### 🚀 **Dharani Thakkallapally (AI & NLP Engineer)**
+- Develop **AI-based dynamic storytelling** using **NLP models** (Hugging Face, GPT-based models).  
+- Fine-tune **pre-trained NLP models** for travel-specific content generation.  
+- Implement **algorithms for personalized travel recommendations**.  
+- Ensure **seamless integration** between **AI-generated narratives** and **travel plans**.  
+- **Skillset:** Data Science, Machine Learning, Deep Learning, Python, Cloud Platforms  
 
-Design and implement a personalized recommendation engine based on user preferences & reviews.
-Utilize machine learning models and rule-based filtering for tailored travel plans.
-Adapt recommendations dynamically based on real-time factors (weather, delays).
-Document project workflow, methodologies, and results.
-Skillset: Data Science, Machine Learning, Deep Learning, Python, Blockchain Technologies
-🔗 Pavan Sundar Reddy Guthikonda (Backend & API Integration Developer)
+---
 
-Develop and manage backend architecture using Flask/FastAPI.
-Integrate APIs (Google Places, OpenWeatherMap, Amadeus API, SerpAPI) for real-time data.
-Build RESTful APIs for frontend-backend communication.
-Manage local storage for user data and preferences.
-Skillset: Data Science, Machine Learning, Deep Learning, Python, Node.js, SQL Databases
-🎨 Viswanth Tammana (Frontend Developer | Team Lead)
+### 🎯 **Banu Teja Jampani (AI-Powered Recommendation Engineer)**
+- **Design and implement** a **personalized recommendation engine** based on **user preferences & reviews**.  
+- Utilize **machine learning models** and **rule-based filtering** for **tailored travel plans**.  
+- Adapt **recommendations dynamically** based on **real-time factors** (weather, delays).  
+- **Document** project workflow, methodologies, and results.  
+- **Skillset:** Data Science, Machine Learning, Deep Learning, Python, Blockchain Technologies  
 
-Build an interactive UI using Streamlit.
-Ensure smooth real-time updates from backend to frontend.
-Implement UI components for travel recommendations & dynamic storytelling.
-Collaborate with Banu to display personalized recommendations in the UI effectively.
-Skillset: Data Science, Machine Learning, Deep Learning, Python, React.js, REST API
-🔧 Troubleshooting
-⚠️ Common Issues & Fixes:
+---
 
-Invalid API Key Error? → Ensure your API keys are correctly set.
-Module Not Found Error? → Run pip install -r requirements.txt again.
-Streamlit App Not Running? → Make sure to activate the virtual environment.
+### 🔗 **Pavan Sundar Reddy Guthikonda (Backend & API Integration Developer)**
+- Develop and manage **backend architecture** using **Flask/FastAPI**.  
+- Integrate **APIs** (Google Places, OpenWeatherMap, Amadeus API, SerpAPI) for **real-time data**.  
+- Build **RESTful APIs** for **frontend-backend communication**.  
+- Manage **local storage** for **user data and preferences**.  
+- **Skillset:** Data Science, Machine Learning, Deep Learning, Python, Node.js, SQL Databases  
 
+---
+
+### 🎨 **Viswanth Tammana (Frontend Developer | Team Lead)**
+- Build an **interactive UI** using **Streamlit**.  
+- Ensure **smooth real-time updates** from backend to frontend.  
+- Implement **UI components** for travel recommendations & dynamic storytelling.  
+- Collaborate with **Banu** to display **personalized recommendations** in the UI effectively.  
+- **Skillset:** Data Science, Machine Learning, Deep Learning, Python, React.js, REST API  
+
+---
+
+## 🔧 **Troubleshooting**
+### ⚠️ **Common Issues & Fixes**:
+- **❌ Invalid API Key Error?** → Ensure your **API keys** are **correctly set**.  
+- **📦 Module Not Found Error?** → Run `pip install -r requirements.txt` again.  
+- **🚀 Streamlit App Not Running?** → Make sure to **activate the virtual environment** before running the app.  
+
+---
+
+📌 **Developed by:** **[The WanderCoders Team]** 🚀🎉  
